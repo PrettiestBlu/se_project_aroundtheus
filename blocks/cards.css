@@ -1,0 +1,22 @@
+.cards {
+font-family: "Inter", Arial, Helvetica, sans-serif;
+font-weight: 900;
+text-align: left;
+
+}
+
+.cards__list {
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(auto-fit, 282px);
+grid-gap: 20px 17px;
+border-radius: 10px 10px 0px 0px;
+margin: 0;
+padding: 51px 0px 0px 0px;
+}
+
+@media screen and (max-width:480px) {
+    .cards__list {
+    padding: 0px 19px 19px;
+    }
+}

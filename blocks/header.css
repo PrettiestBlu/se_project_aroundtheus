@@ -1,0 +1,26 @@
+.header {
+min-height: 120px;
+padding-top: 45px;
+border-bottom: solid;
+border-width: 1px;
+border-color: #545454;
+position: relative;
+}
+
+.header__image {
+
+}
+
+@media screen and (max-width:480px) {
+    .header {
+    width: 320px;
+    
+    }
+
+    .header__image {
+    width: 126px;
+    height: 24px;
+    padding: 28px 167px 32px 27px;
+    }
+
+}

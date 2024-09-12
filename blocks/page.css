@@ -1,13 +1,31 @@
 .page {
-width: 1280px;
-height: 1217px;
-top: 1546px;
-left: 1167px;
-gap: 0px;
-opacity: 0px;
 background-color: #000000;
-background-size: cover;
-background-repeat: no-repeat;
-justify-content: center;
-font-family: "Inter", sans-serif;
+color: #FFFFFF;
+font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.page__section {
+max-width: 880px;
+width: 100%;
+position: relative;
+margin: 0 auto;
+box-sizing: border-box; /*keeps it contained to width set*/
+}
+
+.page__content {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+padding: 0 20px;
+}
+
+@media screen and (max-width:480px) {
+    .page {
+    width: 320px;
+    height: 2812px;
+    top: 1546px;
+    left: 2547px;
+    padding: 0px 0px 98px 0px;
+    }
+
 }
