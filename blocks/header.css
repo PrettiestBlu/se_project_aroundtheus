@@ -7,20 +7,38 @@ border-color: #545454;
 position: relative;
 }
 
-.header__image {
-
-}
-
-@media screen and (max-width:480px) {
+@media screen and (min-width:0px) and (max-width:330px) {
     .header {
-    width: 320px;
+    width: 100%;
     
     }
 
     .header__image {
-    width: 126px;
-    height: 24px;
-    padding: 28px 167px 32px 27px;
+    width: 125px;
+    height: 25px;
+    }
+}
+
+@media screen and (min-width:330px) and (max-width:480px) {
+    .header {
+    width: 100%;
+    
     }
 
+    .header__image {
+    width: 150px;
+    height: 30px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:920px) {
+    .header {
+    width: 100%;
+    
+    }
+
+    .header__image {
+    width: 175px;
+    height: 35px;
+    }
 }

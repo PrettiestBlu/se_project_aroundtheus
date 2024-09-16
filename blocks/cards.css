@@ -2,7 +2,6 @@
 font-family: "Inter", Arial, Helvetica, sans-serif;
 font-weight: 900;
 text-align: left;
-
 }
 
 .cards__list {
@@ -15,8 +14,16 @@ margin: 0;
 padding: 51px 0px 0px 0px;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (min-width:0px) and (max-width:330px) {
     .cards__list {
-    padding: 0px 19px 19px;
+        
     }
+}
+
+@media screen and (min-width:330px) and (max-width:480px){
+    
+}
+
+@media screen and (min-width:920px) {
+    
 }
