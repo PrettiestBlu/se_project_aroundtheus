@@ -9,18 +9,6 @@
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 282px);
   grid-gap: 20px 17px;
-  border-radius: 10px 10px 0px 0px;
   margin: 0;
   padding: 51px 0px 0px 0px;
-}
-
-@media screen and (min-width: 0px) and (max-width: 330px) {
-  .cards__list {
-  }
-}
-
-@media screen and (min-width: 330px) and (max-width: 480px) {
-}
-
-@media screen and (min-width: 920px) {
 }
