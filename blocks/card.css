@@ -5,10 +5,17 @@
   list-style-type: none;
 }
 
-.card_image {
+.card__card-image {
   width: 282px;
   height: 282px;
   object-fit: cover;
+}
+
+.card__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 219px;
 }
 
 .card__description {
@@ -22,7 +29,7 @@
 }
 
 .card__like-button {
-  background: transparent url('/images/like-inactive.svg') center no-repeat;
+  background: transparent url("/images/like-inactive.svg") center no-repeat;
   width: 21px;
   height: 18px;
   border-style: none;
