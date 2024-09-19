@@ -29,8 +29,13 @@
 }
 
 .card__like-button {
-  background: transparent url("/images/like-inactive.svg") center no-repeat;
+  background: transparent url(/images/like-button.svg) center no-repeat;
   width: 21px;
   height: 18px;
   border-style: none;
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
