@@ -20,13 +20,12 @@
   height: 24px;
   width: 24px;
   grid-area: button;
-  border: solid;
   border-width: 1px;
   border-color: #ffffff;
 }
 
 .profile__edit-button:hover{
-  border-color: rgba(255, 255, 255, 0.7 );
+  border-color: rgba(255, 255, 255, 0.6 );
   cursor: pointer;
 }
 
