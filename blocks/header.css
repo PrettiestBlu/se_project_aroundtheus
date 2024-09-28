@@ -1,26 +1,16 @@
 .header {
+  
+  margin: 0;
   min-height: 120px;
   padding-top: 45px;
   border-bottom: solid;
   border-width: 1px;
   border-color: rgba(84,84,84,0.7);
-  position: relative;
+  align-self: center;
 }
 
-@media screen and (max-width: 480px) {
-  .header {
-    width: 100%;
-    margin: 0 20px 0 20px;
-    align-items: center;
-  }
 
-  .header__image {
-    width: 150px;
-    height: 30px;
-  }
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 800px) and (max-width: 1120px) {
   .header {
     width: 100%;
   }
@@ -28,5 +18,23 @@
   .header__image {
     width: 175px;
     height: 35px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 799px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    width: 100%;
+    align-items: center;
+  }
+
+  .header__image {
+    width: 150px;
+    height: 30px;
   }
 }

@@ -18,22 +18,17 @@
   padding: 0 20px;
 }
 
-@media screen and (max-width: 480px) {
-  .page {
-    left: 2547px;
-    padding: 0px 0px 98px 0px;
-  }
-
+/*@media screen and (max-width: 480px) {
   .page__content {
     padding: 0 0 20px;
   }
 
   .page__section {
-    margin-left: 0;
+    /*margin: 0 auto;
   }
-}
+}*/
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px){
   .page {
     margin: 0 auto;
   }

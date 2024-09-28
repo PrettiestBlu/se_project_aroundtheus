@@ -1,7 +1,6 @@
 .cards {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 900;
-  text-align: left;
 }
 
 .cards__list {
@@ -11,4 +10,10 @@
   grid-gap: 20px 17px;
   margin: 0;
   padding: 51px 0px 0px 0px;
+}
+
+@media screen and (max-width: 480px) {
+  .cards__list {
+    padding-top: 36px;
+  }
 }
