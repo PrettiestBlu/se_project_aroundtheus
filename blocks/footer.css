@@ -10,10 +10,10 @@
   margin: 0;
 }
 
-@media screen and (min-width: 282px) and (max-width: 480px) {
+@media screen and (min-width: 801px) and (max-width: 1120px) {
   .footer {
-    font-size: 14px;
-    line-height: 16.94px;
+    font-size: 18px;
+    line-height: 21.78px;
   }
 }
 
@@ -23,9 +23,10 @@
   }
 }
 
-@media screen and (min-width: 801px) and (max-width: 1120px) {
+@media screen and (min-width: 282px) and (max-width: 480px) {
   .footer {
-    font-size: 18px;
-    line-height: 21.78px;
+    font-size: 14px;
+    line-height: 16.94px;
+    padding: 48px 0px 36px;
   }
 }
