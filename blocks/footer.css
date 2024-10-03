@@ -2,24 +2,20 @@
   color: #545454;
   padding: 67px 0px 60px;
   box-sizing: border-box;
-  font-family: Inter;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
 }
 
 .footer__content {
   margin: 0;
 }
 
-@media screen and (min-width: 801px) and (max-width: 1120px) {
-  .footer {
-    font-size: 18px;
-    line-height: 21.78px;
-  }
-}
-
-@media screen and (min-width: 481px) and (max-width: 800px) {
+@media screen and (min-width: 481px) and (max-width: 801px) {
   .footer {
     font-size: 16px;
+    max-width: 880px;
   }
 }
 
@@ -27,6 +23,6 @@
   .footer {
     font-size: 14px;
     line-height: 16.94px;
-    padding: 48px 0px 36px;
+    max-width: 282px;
   }
 }
