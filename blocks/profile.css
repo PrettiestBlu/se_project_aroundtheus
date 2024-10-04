@@ -125,4 +125,13 @@
     height: 17px;
     width: 17px;
   }
+
+  .profile__title {
+    max-width: 196px;
+  }
+
+  .profile__description{
+  padding: 0 0 36px;
+  max-width: 282px;
+  }
 }
