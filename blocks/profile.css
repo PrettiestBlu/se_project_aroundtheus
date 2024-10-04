@@ -118,7 +118,7 @@
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 0;
+  margin-left: 0;
   }
   .profile__edit-button {
     height: 17px;
