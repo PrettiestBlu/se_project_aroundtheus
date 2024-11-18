@@ -1,0 +1,48 @@
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+/*display: flex;*/
+padding: 0, 19px;
+display: none;
+}
+
+.modal_opened {
+    display: flex;
+}
+
+.modal__container {
+    position: relative;
+    padding: 36px; 
+    background-color: #fff;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.modal__heading {
+    color: #000;
+}
+
+.modal__close {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    bottom: calc(100% + 5px); /*pushing from the botton 100% then adding 5px no matter what*/
+    left: calc(100% + 5px); /*pushing from the botton 100% then adding 5px no matter what*/
+    /*top: -45px;
+    right: -45px;*/
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/Close\ Icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 630px) {
+    
+}
