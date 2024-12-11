@@ -52,7 +52,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 373px;
+  max-width: 375px;
 }
 
 .profile__description {
@@ -75,7 +75,7 @@
   background-position: center;
 }
 
-@media screen and (max-width: 800px) and (max-width: 1120px) {
+@media screen and (max-width: 800px) and (max-width: 1000px) {
   .profile {
     flex-direction: column;
   }
