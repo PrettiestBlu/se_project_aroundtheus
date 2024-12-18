@@ -124,7 +124,7 @@
     .modal__container {
       max-height: 322px;
       max-width: 282px;
-      padding: 25px 22px 30px;
+      padding: 25px 22px 50px;
     }
 
     .modal__form {
@@ -142,7 +142,8 @@
     }
 
     .modal__submit-button {
-      margin-top: 45px;
+      font-size: 14px;
+      margin-top: 27.50px;
     }
 
     .modal__close-button{
