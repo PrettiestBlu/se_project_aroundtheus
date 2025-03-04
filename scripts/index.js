@@ -21,11 +21,16 @@ const initialCards = [
   },
   {
     name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
 
+const cardTemplate =document
+.querySelector("#card-template")
+.content.firstElementChild;
+
 console.log(initialCards);
+
 
 /* ELEMENTS */
 const profileEditButton = document.querySelector(".profile__edit-button");
@@ -34,18 +39,15 @@ const closeButton = modal.querySelector("#profile__close-button");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
-const profileDescriptionInput = document.querySelector(
-  "#profile-description-input"
-);
+const profileDescriptionInput = document.querySelector("#profile-description-input");
 const profileEditForm = modal.querySelector(".modal__form");
 const cardListEl = document.querySelector(".cards__list");
-const cardTemplate =
-  document.querySelector("#card-template").content.firstElementChild;
 
 /* FUNCTIONS */
 function closePopup() {
   modal.classList.remove("modal_opened");
 }
+
 
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
