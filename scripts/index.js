@@ -24,33 +24,33 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg",
   },
 ];
-
-const cardTemplate =document
-.querySelector("#card-template")
-.content.firstElementChild;
-
 console.log(initialCards);
 
-
-/* ELEMENTS */
+/*  PROFILE ELEMENTS */
 const profileEditButton = document.querySelector(".profile__edit-button");
-const modal = document.querySelector("#profile__edit-modal");
-const closeButton = modal.querySelector("#profile__close-button");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
-const profileTitleInput = document.querySelector("#profile-title-input");
-const profileDescriptionInput = document.querySelector("#profile-description-input");
-const profileEditForm = modal.querySelector(".modal__form");
+
+/*  FORM ELEMENTS */
+const modalOne = document.querySelector("#profile__edit-modal");
+const profileEditForm = modalOne.querySelector(".modal__form");
+const profileTitleInput = modalOne.querySelector("#profile-title-input");
+const profileDescriptionInput = modalOne.querySelector("#profile-description-input");
+const profileCloseButton = modalOne.querySelector(".modal__close-button");
+
+const modalTwo = document.querySelector("#add__card-modal");
+const profileAddButton = document.querySelector(".profile__add-button");
+const modalTwoClose = modalTwo.querySelector(".modal__close-button");
+
+/*  CARD RELATED ELEMENTS */
 const cardListEl = document.querySelector(".cards__list");
+const cardTemplate =document.querySelector("#card-template")
 
-/* FUNCTIONS */
-function closePopup() {
-  modal.classList.remove("modal_opened");
-}
-
-
+/* CARD FUNCTIONS */
 function getCardElement(cardData) {
-  const cardElement = cardTemplate.cloneNode(true);
+  const cardElement = cardTemplate.content
+  .querySelector(".card")
+  .cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
 
@@ -61,25 +61,63 @@ function getCardElement(cardData) {
   return cardElement;
 }
 
-/* EVENT HANDLERS */
-function handleProfileEditSubmit(e) {
+initialCards.forEach((item) => {
+  const cardElement = getCardElement(item);
+  cardListEl.append(cardElement); //append or prepend depending on order specified
+});
+
+/*MODAL ONE EVENT LISTENERS, FUNCTIONS & EVENT HANDLERS*/
+profileEditButton.addEventListener("click", () => {
+profileTitleInput.value = profileTitle.textContent;
+profileDescriptionInput.value = profileDescription.textContent;
+modalOne.classList.add("modal_is-opened")});
+//^^??looking for the best way to submit close event when clicking the X 
+profileCloseButton.addEventListener("click", () => {
+  closeModal;
+});
+profileEditForm.addEventListener("submit", handleProfileEditSubmit);
+
+profileAddButton.addEventListener("click", () => {
+  profileTitleInput.value = profileTitle.textContent;
+  profileDescriptionInput.value = URL.textContent;
+  modalTwo.classList.add("modal_is-opened")});
+
+  modalTwoClose.addEventListener("click", () => {
+    closeModal;
+  });
+  modalTwoClose.addEventListener("submit", handleProfileEditSubmit); //does this line have to be here?
+
+function closeModal(modalOne) {
+  modalOne.classList.remove("modal_is-opened");
+} //this function assists with closing modalOne
+
+function handleProfileEditSubmit(e) { //can use "e" or "evt" in event expressions
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
-  closePopup();
-}
+  closeModal(modalOne)
+};
 
-/* EVENT LISTENERS */
-profileEditButton.addEventListener("click", () => {
-  profileTitleInput.value = profileTitle.textContent;
-  profileDescriptionInput.value = profileDescription.textContent;
-  modal.classList.add("modal_opened");
-});
 
-closeButton.addEventListener("click", closePopup);
-profileEditForm.addEventListener("submit", handleProfileEditSubmit);
+//FOR MY "ADD CARD" MODAL
 
-initialCards.forEach((cardData) => {
-  const cardElement = getCardElement(cardData);
-  cardListEl.prepend(cardElement);
-});
+
+const modalTwoTemplate =document
+.querySelector("#card-template")
+.content.querySelector(".modal__two")
+
+profileAddButton.addEventListener("click", () => {
+  modalTwo(modalTwo);
+})
+
+function closePopup(modalTwo) {
+  modalTwo.classList.remove("modal_is-opened")
+};
+
+//finishing up tomorrow: currently working on finding the const variables for
+//the remaining components in regard to modalTwo
+//copying code, filling in what's necessary to make it functional (X)
+//find direct corresponding variables from CSS to HTML and see exactly how the
+//previous code was written for modalOne (X)
+//Make sure no component is missing and everything corresponds correctly
+//punctuations should be exact DOUBLE CHECK
